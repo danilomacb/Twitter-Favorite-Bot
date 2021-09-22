@@ -4,8 +4,11 @@
   "description": "Nodejs Twitter Bot",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js"
+    "start": "node app.js",
+    "startpm2": "npx pm2 start ecosystem.config.js --attach",
+    "deletepm2": "npx pm2 delete ecosystem.config.js",
+    "listpm2": "npx pm2 list",
+    "heroku-postbuild": "npm install pm2"
   },
   "repository": {
     "type": "git",
@@ -18,6 +21,8 @@
   },
   "homepage": "https://github.com/bmorelli25/Twitter-Bot#readme",
   "dependencies": {
+    "dotenv": "^10.0.0",
+    "pm2": "^5.1.1",
     "twitter": "^1.7.0"
   }
 }
