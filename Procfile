@@ -1,0 +1,1 @@
+worker: npm run startpm2
